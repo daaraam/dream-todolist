@@ -1,17 +1,15 @@
 import React from 'react';
 
 import './App.css';
-import Article from './Components/Article';
-import Footer from './Components/Footer';
-import Nav from './Components/Nav';
+import SelectNavBar from './Components/SelectNavBar';
+import TodoList from './Components/TodoList';
 
 export default function App() {
 	return (
 		<div className="backgroundContainer">
 			<div className="todoContainer">
-				<Nav />
-				<Article />
-				<Footer />
+				<SelectNavBar />
+				<TodoList />
 			</div>
 		</div>
 	);

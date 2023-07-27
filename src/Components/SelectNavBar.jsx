@@ -1,6 +1,6 @@
 import { MdLightMode } from 'react-icons/md';
 
-export default function Nav() {
+export default function SelectNavBar() {
 	return (
 		<nav className="nav">
 			<MdLightMode />
