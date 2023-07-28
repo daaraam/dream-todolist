@@ -1,15 +1,18 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 import './App.css';
-import SelectNavBar from './Components/SelectNavBar';
-import TodoList from './Components/TodoList';
+import Header from './Components/Header';
+import TodoList from './Components/TodoList/TodoList';
 
+const filters = ['All', 'Active', 'Completed'];
 export default function App() {
+	const [filter, setFilter] = useState(filters[0]);
+
 	return (
 		<div className="backgroundContainer">
 			<div className="todoContainer">
-				<SelectNavBar />
-				<TodoList />
+				<Header filters={filters} filter={filter} onFilterChange={setFilter} />
+				<TodoList filter={filter} />
 			</div>
 		</div>
 	);
