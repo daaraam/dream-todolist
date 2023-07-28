@@ -1,4 +1,4 @@
-.todoContainer {
+/* .todoContainer {
   background-color: var(--color-navy);
   color: var(--color-white);
   width: 25rem;
@@ -12,11 +12,11 @@
   flex-direction: column;
   justify-content: space-between;
   align-items: stretch;
-}
+} */
 
 .article {
   margin: 10px;
-  height: 250px;
+  height: 300px;
   overflow: auto;
   margin-right: 30px;
 }
@@ -24,7 +24,7 @@
 .select {
   display: flex;
   gap: 30px;
-  color: var(--color-orange);
+  color: var(--color-accent);
 }
 
 .selectIcon {

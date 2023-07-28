@@ -10,18 +10,25 @@
 }
 
 .addTodoInput {
-    border: 3px solid var(--color-white);
-    border-radius: 5px 0 0 5px;
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+    border: none;
     width: 18rem;
-    height: 35px;
+    height: 2rem;
 }
 
 .addButton {
-    border: 3px solid var(--color-orange);
-    border-radius: 0px 5px 5px 0px;
-    background-color: var(--color-orange);
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+    background-color: var(--color-accent);
     color: var(--color-white);
-    height: 43px;
-    width: 5rem;
+    width: 4rem;
+    height: 2.2rem;
     font-weight: 600;
+    cursor: pointer;
+    margin: 2px;
+}
+
+.addButton:hover {
+    filter: brightness(125%);
 }

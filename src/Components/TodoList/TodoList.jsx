@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import uuid from 'react-uuid';
+import { useDarkMode } from '../../Context/DarkModeContext';
 import AddTodo from './AddTodo';
 import TodoItem from './TodoItem';
 import styles from './TodoList.module.css';
@@ -28,9 +29,9 @@ const TodoList = ({ filter }) => {
 	};
 
 	const filtered = getFilteredItems(todos, filter);
-
+	const { darkMode } = useDarkMode();
 	return (
-		<>
+		<div className={styles.todoContainer}>
 			<article className="article">
 				<ul>
 					<li className={styles.list}>
@@ -46,7 +47,7 @@ const TodoList = ({ filter }) => {
 				</ul>
 			</article>
 			<AddTodo setTodos={setTodos} todos={todos} />
-		</>
+		</div>
 	);
 };
 

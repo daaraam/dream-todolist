@@ -1,23 +1,52 @@
-.nav {
+.header {
     color: var(--color-white);
+    background-color: var(--color-black);
     display: flex;
     align-items: center;
     border-radius: 15px 15px 0 0;
     height: 70px;
     font-size: 15pt;
     justify-content: space-around;
+    width: 25rem;
+    padding: 1%;
 }
 
-.darkModeToggle:hover {
+.button {
+    border: none;
+    outline: none;
+    background-color: var(--color-navy);
+}
+
+.darkModeButton,
+.lightModeButton {
+    width: 1.1rem;
+    height: 1.1rem;
+    color: white;
+}
+
+
+.lightModeButton {
+    width: 1rem;
+    height: 1rem;
+}
+
+
+.darkModeButton:hover {
     transform: scale(1.2);
     cursor: pointer;
-    color: var(--color-orange);
+    color: var(--color-accent);
+}
+
+.lightModeButton:hover {
+    transform: scale(1.2);
+    cursor: pointer;
+    color: var(--color-accent);
 }
 
 .select {
     display: flex;
     gap: 30px;
-    color: var(--color-orange);
+    color: var(--color-accent);
 }
 
 .selectIcon {
@@ -26,7 +55,13 @@
 }
 
 .select .selectIcon:hover {
-    text-decoration: underline;
     text-decoration-color: var(--color-white);
     transform: scale(1.1);
+}
+
+.select .selectIcon.selected::after {
+    content: '';
+    display: block;
+    margin-top: 0.2rem;
+    border: 1px solid var(--color-accent);
 }

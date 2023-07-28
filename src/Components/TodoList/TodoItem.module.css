@@ -1,58 +1,36 @@
 .articleTopSpan {
     display: flex;
-    justify-content: space-between
+    justify-content: space-between;
+    align-items: center;
+    height: 3rem;
 }
 
 .articleSpan {
     display: flex;
     gap: 10px;
     align-items: center;
+    font-weight: 600;
 }
 
 .deleteBtn {
-    background-color: var(--color-orange);
+    background-color: var(--color-accent);
     border-radius: 100%;
-    height: 35px;
-    width: 35px;
+    height: 2rem;
+    width: 2rem;
     cursor: pointer;
     margin-right: 15px;
+    outline: none;
+    border: none;
+    display: flex;
+    align-items: center;
 }
 
 .deleteBtn:hover {
-    transform: scale(1.1);
+    transition: all 150ms ease-out;
+    transform: rotate(-35deg) scale(1.1);
 }
 
-input[type="checkbox"]+label {
-    display: inline-block;
-    width: 15px;
-    height: 15px;
-    border: 3px solid var(--color-white);
-    background-color: var(--color-white);
-    position: relative;
-    border-radius: 3px;
-    cursor: pointer;
-}
-
-input[type="checkbox"] {
-    display: none;
-}
-
-/* 체크박스가 선택되었을 때 스타일 변경 */
-
-input[type='checkbox']:checked+label::after {
-    content: '✔';
-    font-size: 15px;
-    width: 15px;
-    height: 15px;
-    text-align: center;
-    position: absolute;
-    border: 3px solid var(--color-orange);
-    background-color: var(--color-orange);
-    right: -3px;
-    bottom: -3px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 3px;
-    cursor: pointer;
+.checkbox {
+    width: 1.5rem;
+    height: 1.5rem;
 }

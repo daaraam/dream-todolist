@@ -14,13 +14,11 @@ const TodoItem = ({ item, onDelete, statusUpdate }) => {
 		<span className={styles.articleTopSpan}>
 			<span className={styles.articleSpan}>
 				<input
+					className={styles.checkbox}
 					type="checkbox"
-					id={`checkbox-${id}`}
 					checked={status === 'Completed'}
 					onChange={statusChangeHandler}
 				/>
-
-				<label htmlFor={`checkbox-${id}`}></label>
 				{text}
 			</span>
 

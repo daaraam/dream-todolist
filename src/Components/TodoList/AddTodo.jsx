@@ -24,7 +24,7 @@ export default function AddTodo({ setTodos, todos }) {
 			<form onSubmit={addButtonHandler}>
 				<input
 					className={styles.addTodoInput}
-					placeholder="Add Todo"
+					placeholder="　Add Todo"
 					value={write}
 					onChange={e => setWrite(e.target.value)}
 				/>
