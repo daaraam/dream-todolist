@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import uuid from 'react-uuid';
+import styles from './AddTodo.module.css';
 
 export default function AddTodo({ setTodos, todos }) {
 	const [write, setWrite] = useState('');
@@ -19,15 +20,15 @@ export default function AddTodo({ setTodos, todos }) {
 	};
 
 	return (
-		<footer className="footer">
+		<footer className={styles.footer}>
 			<form onSubmit={addButtonHandler}>
 				<input
-					className="input"
+					className={styles.addTodoInput}
 					placeholder="Add Todo"
 					value={write}
 					onChange={e => setWrite(e.target.value)}
 				/>
-				<button className="button" type="submit">
+				<button className={styles.addButton} type="submit">
 					Add
 				</button>
 			</form>

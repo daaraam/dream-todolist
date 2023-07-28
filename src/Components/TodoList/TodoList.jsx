@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import uuid from 'react-uuid';
 import AddTodo from './AddTodo';
 import TodoItem from './TodoItem';
+import styles from './TodoList.module.css';
 
 const TodoList = ({ filter }) => {
 	const [todos, setTodos] = useState([
@@ -32,7 +33,7 @@ const TodoList = ({ filter }) => {
 		<>
 			<article className="article">
 				<ul>
-					<li className="li">
+					<li className={styles.list}>
 						{filtered.map(item => (
 							<TodoItem
 								key={item.id}

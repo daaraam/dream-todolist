@@ -1,5 +1,6 @@
 import React from 'react';
 import { AiFillDelete } from 'react-icons/ai';
+import styles from './TodoItem.module.css';
 
 const TodoItem = ({ item, onDelete, statusUpdate }) => {
 	const { id, text, status } = item;
@@ -10,8 +11,8 @@ const TodoItem = ({ item, onDelete, statusUpdate }) => {
 	};
 
 	return (
-		<span className="articleTopSpan">
-			<span className="articleSpan">
+		<span className={styles.articleTopSpan}>
+			<span className={styles.articleSpan}>
 				<input
 					type="checkbox"
 					id={`checkbox-${id}`}
@@ -23,7 +24,7 @@ const TodoItem = ({ item, onDelete, statusUpdate }) => {
 				{text}
 			</span>
 
-			<button className="deleteBtn" onClick={() => onDelete(id)}>
+			<button className={styles.deleteBtn} onClick={() => onDelete(id)}>
 				<AiFillDelete size={20} color="rgb(255, 255, 255)" />
 			</button>
 		</span>

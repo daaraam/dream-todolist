@@ -1,0 +1,32 @@
+.nav {
+    color: var(--color-white);
+    display: flex;
+    align-items: center;
+    border-radius: 15px 15px 0 0;
+    height: 70px;
+    font-size: 15pt;
+    justify-content: space-around;
+}
+
+.darkModeToggle:hover {
+    transform: scale(1.2);
+    cursor: pointer;
+    color: var(--color-orange);
+}
+
+.select {
+    display: flex;
+    gap: 30px;
+    color: var(--color-orange);
+}
+
+.selectIcon {
+    cursor: pointer;
+
+}
+
+.select .selectIcon:hover {
+    text-decoration: underline;
+    text-decoration-color: var(--color-white);
+    transform: scale(1.1);
+}
