@@ -1,23 +1,11 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import uuid from 'react-uuid';
-import { useDarkMode } from '../../Context/DarkModeContext';
 import AddTodo from './AddTodo';
 import TodoItem from './TodoItem';
 import styles from './TodoList.module.css';
 
 const TodoList = ({ filter }) => {
-	const [todos, setTodos] = useState([
-		{
-			id: uuid(),
-			text: '공부하기',
-			status: 'Completed',
-		},
-		{
-			id: uuid(),
-			text: '투두리스트 완성하기',
-			status: 'Active',
-		},
-	]);
+	const [todos, setTodos] = useState(() => readTodosFromLocalStorage());
 
 	const delBtnClickHandler = id => {
 		const filteredTodo = todos.filter(item => item.id !== id);
@@ -28,8 +16,11 @@ const TodoList = ({ filter }) => {
 		setTodos(todos.map(item => (item.id === id ? { ...item, status: newStatus } : item)));
 	};
 
+	useEffect(() => {
+		localStorage.setItem('TODOS', JSON.stringify(todos));
+	}, [todos]);
+
 	const filtered = getFilteredItems(todos, filter);
-	const { darkMode } = useDarkMode();
 	return (
 		<div className={styles.todoContainer}>
 			<article className="article">
@@ -58,4 +49,17 @@ const getFilteredItems = (todos, filter) => {
 		return todos;
 	}
 	return todos.filter(item => item.status === filter);
+};
+
+const readTodosFromLocalStorage = () => {
+	const todos = localStorage.getItem('TODOS');
+	return todos
+		? JSON.parse(todos)
+		: [
+				{
+					id: uuid(),
+					text: 'TODOLIST를 작성해보세요!',
+					status: 'Active',
+				},
+		  ];
 };

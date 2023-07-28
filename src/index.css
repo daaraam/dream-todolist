@@ -1,18 +1,18 @@
 :root {
+  --color-navy: rgb(255, 255, 255);
+  --color-white: #000000;
+  --color-accent: #ea44a2;
+  --color-black: rgb(5, 5, 56);
+  --color-background: rgba(238, 174, 202, 1);
+}
+
+html.dark {
   --color-navy: rgb(5, 5, 56);
   --color-white: #ffffff;
   --color-accent: #ff8a24;
   --color-shadow: rgba(0, 0, 0, 0.36);
   --color-black: black;
   --color-background: rgb(91, 85, 208);
-}
-
-html.dark {
-  --color-navy: rgb(255, 255, 255);
-  --color-white: #000000;
-  --color-accent: #ea44a2;
-  --color-black: rgb(5, 5, 56);
-  --color-background: rgba(238, 174, 202, 1);
 }
 
 body {
